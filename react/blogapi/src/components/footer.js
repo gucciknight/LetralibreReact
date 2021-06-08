@@ -5,6 +5,11 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
+//Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import imglogo from '../images/logoletralibre.png'
+import './styles/LoginForm.css'
+import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
 const useStyles = makeStyles((theme) => ({
 	'@global': {
@@ -31,7 +36,7 @@ function Copyright() {
 		<Typography variant="body2" color="textSecondary" align="center">
 			{'Copyright © '}
 			<Link color="inherit" href="https://material-ui.com/">
-				Your Website
+				Letra Libre
 			</Link>{' '}
 			{new Date().getFullYear()}
 			{'.'}
@@ -73,7 +78,12 @@ function Footer() {
 	const classes = useStyles();
 	return (
 		<React.Fragment>
-			<Container maxWidth="md" component="footer" className={classes.footer}>
+			<Container component="footer" className={classes.footer}>
+			<Row>
+            		<Col style= {{ backgroundColor: "red" }}> <br/> </Col>
+            		<Col style= {{ backgroundColor: "blue" }}> <br/> </Col>
+        		</Row>
+				{/* 
 				<Grid container spacing={4} justify="space-evenly">
 					{footers.map((footer) => (
 						<Grid item xs={6} sm={3} key={footer.title}>
@@ -92,6 +102,7 @@ function Footer() {
 						</Grid>
 					))}
 				</Grid>
+								*/}
 				<Box mt={5}>
 					<Copyright />
 				</Box>

@@ -3,7 +3,7 @@ import axiosInstance from '../axios';
 import { useHistory } from 'react-router-dom';
 //MaterialUI
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -12,7 +12,13 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+//import Container from '@material-ui/core/Container';
+//Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import imglogo from '../images/logoletralibre.png'
+import './styles/LoginForm.css'
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
+
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -73,6 +79,7 @@ export default function SignIn() {
 	const classes = useStyles();
 
 	return (
+		/*
 		<Container component="main" maxWidth="xs">
 			<CssBaseline />
 			<div className={classes.paper}>
@@ -134,5 +141,74 @@ export default function SignIn() {
 				</form>
 			</div>
 		</Container>
+		*/
+		<Row>
+                <Col/>
+                <Col className="m-5">
+                    <Container className="contenedor">
+                        <br/>
+                        <Card className="carta">
+                            <Card.Img className="logo rounded mx-auto d-block" src={imglogo}/>
+                            <br/>
+                            <Card.Title className="text-end intranet mr-3 fs-6">Portal Tutores</Card.Title>
+                            <Form className="m-5">
+                                <Form.Group className={classes.form}>
+                                    <Form.Label className="formLabels">
+                                        Nombre de Usuario
+                                    </Form.Label>
+                                    <Form.Control 
+									variant="outlined"
+									margin="normal"
+									required
+									fullWidth
+									id="email"
+									label="Email Address"
+									name="email"
+									autoComplete="email"
+									autoFocus
+									onChange={handleChange}
+									className="inputs" 
+									/>
+                                    <Form.Label className="formLabels mt-3">
+                                        Contraseña
+                                    </Form.Label>
+                                    <Form.Control 
+									variant="outlined"
+									margin="normal"
+									required
+									fullWidth
+									name="password"
+									label="Password"
+									type="password"
+									id="password"
+									autoComplete="current-password"
+									onChange={handleChange}
+									name="password" 
+									type="password" 
+									className="inputs"
+									/>
+                                <Row>
+                                    <Col/>
+                                    <Col className="d-grid gap-2 align-center justify-content-md-end mt-3" style={{color: "white"}}>
+                                            <Button
+											type="submit"
+											fullWidth
+											variant="warning"
+											color="primary"
+											className={classes.submit}
+											onClick={handleSubmit}
+											style={{color: "white"}}
+											>INGRESAR
+											</Button>
+                                    </Col>
+                                </Row>
+                                </Form.Group>
+                            </Form>
+                        </Card>
+                    </Container>
+                </Col>
+                <Col/>
+            </Row>
+		
 	);
 }

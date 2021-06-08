@@ -38,15 +38,8 @@ function Header() {
 						noWrap
 						className={classes.toolbarTitle}
 					>
-						<Link
-							component={NavLink}
-							to="/"
-							underline="none"
-							color="textPrimary"
-						>
-							Blog
-						</Link>
 					</Typography>
+					{/*
 					<nav>
 						<Link
 							color="textPrimary"
@@ -55,9 +48,10 @@ function Header() {
 							component={NavLink}
 							to="/register"
 						>
-							Register
+							Registro
 						</Link>
 					</nav>
+					*/}
 					<Button
 						href="#"
 						color="primary"

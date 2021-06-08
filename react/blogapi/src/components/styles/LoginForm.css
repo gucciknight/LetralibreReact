@@ -1,0 +1,36 @@
+.contenedor{
+    background-color: rgb(250, 250, 250);
+    
+}
+.formLabels{
+    color: orange;
+}
+.inputs{
+    background-color: orange;
+}
+.intranet{
+    color: #4E66B2;
+    padding-right: 10%;
+}
+.ingresar{
+    color: orange;
+}
+.logo{
+    height: 170px;
+    width: 300px;
+    /*height: 85px;
+      width: 149px; 
+      Tamaño original del logo*/
+}
+.carta{
+    border: 1px solid rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+    background-color: orange !important;
+}
